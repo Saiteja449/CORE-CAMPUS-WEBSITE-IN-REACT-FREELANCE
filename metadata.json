@@ -1,0 +1,8 @@
+{
+  "name": "Core Campus Pvt Ltd",
+  "description": "Premium educational services provider specializing in internships, SAP courses, job placements, and college admissions guidance. Learn, Grow, Succeed.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
