@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { SERVICES, COMPANY_DETAILS } from "../constants";
 
 const STATS = [
-  { label: "Students Trained", value: "5000+", icon: Users },
+  { label: "Students Guided", value: "Growing", icon: Users },
   { label: "Success Rate", value: "98%", icon: Trophy },
-  { label: "Partner Companies", value: "200+", icon: Briefcase },
-  { label: "Years Experience", value: "12+", icon: BookOpen },
+  { label: "Career Domains", value: "25+", icon: Briefcase },
+  { label: "Founded", value: "2024", icon: BookOpen },
 ];
 
 const TESTIMONIALS = [
@@ -165,7 +165,7 @@ export default function Home() {
                   <p className="text-slate-500 text-sm leading-relaxed mb-6">{service.description}</p>
                 </div>
                 <Link
-                  to={`/services#${service.id}`}
+                  to={`/services/${service.id}`}
                   className="inline-flex items-center text-primary font-bold text-sm group"
                 >
                   Learn More
@@ -234,7 +234,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl font-bold text-white">Student Success Stories</h2>
-            <p className="text-slate-400">Join thousands of successful alumni worldwide.</p>
+            <p className="text-slate-400">Join a growing community of career-focused learners.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTIMONIALS.map((t, i) => (

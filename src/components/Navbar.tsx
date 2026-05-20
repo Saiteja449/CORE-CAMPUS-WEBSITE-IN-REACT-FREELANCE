@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { COMPANY_DETAILS } from "../constants";
 
@@ -38,8 +38,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="bg-primary p-2 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-              <GraduationCap className="w-8 h-8 text-secondary" />
+            <div className="bg-primary p-1.5 rounded-xl group-hover:rotate-12 transition-transform duration-300">
+              <img
+                src="/assets/images/logo.jpg"
+                alt={`${COMPANY_DETAILS.name} logo`}
+                className="w-9 h-9 rounded-lg object-cover"
+              />
             </div>
             <div>
               <span className={`block font-bold text-xl leading-none ${scrolled ? "text-primary" : "text-primary"} tracking-tight`}>

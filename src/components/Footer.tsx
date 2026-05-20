@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { GraduationCap, Instagram, Send, Phone, MapPin, Mail, ArrowRight } from "lucide-react";
+import { Instagram, Send, Phone, MapPin, Mail, ArrowRight } from "lucide-react";
 import { COMPANY_DETAILS } from "../constants";
 
 export default function Footer() {
@@ -12,8 +12,12 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-3">
-              <div className="bg-white/10 p-2 rounded-xl backdrop-blur-sm">
-                <GraduationCap className="w-8 h-8 text-secondary" />
+              <div className="bg-white/10 p-1.5 rounded-xl backdrop-blur-sm">
+                <img
+                  src="/assets/images/logo.jpg"
+                  alt={`${COMPANY_DETAILS.name} logo`}
+                  className="w-9 h-9 rounded-lg object-cover"
+                />
               </div>
               <span className="font-bold text-2xl tracking-tight">CORE CAMPUS</span>
             </Link>

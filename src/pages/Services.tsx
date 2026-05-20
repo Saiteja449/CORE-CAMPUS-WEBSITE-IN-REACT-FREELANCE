@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { CheckCircle2, ArrowRight, Laptop, GraduationCap, Briefcase, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { SERVICES, COMPANY_DETAILS } from "../constants";
+import { SERVICES, COMPANY_DETAILS, INTERNSHIP_DOMAINS, COURSES } from "../constants";
 
 const ICON_MAP: Record<string, any> = {
   internships: Briefcase,
@@ -46,6 +46,94 @@ export default function Services() {
           >
             Comprehensive educational and career services designed by industry experts for modern-day requirements.
           </motion.p>
+        </div>
+      </div>
+
+      {/* Internship Domains */}
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        <div className="text-center space-y-4 mb-12">
+          <h4 className="text-primary font-bold tracking-widest uppercase text-sm">Internship Domains</h4>
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
+            Choose Your <span className="text-primary">Career Track</span>
+          </h2>
+          <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
+            Explore practical internship programs with structured learning, projects, stipend benefits, and placement assistance.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {INTERNSHIP_DOMAINS.map((domain, index) => (
+            <motion.div
+              key={domain.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: Math.min(index * 0.03, 0.3) }}
+              whileHover={{ y: -6 }}
+              className="bg-white p-6 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 border border-slate-100 flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-12 h-12 bg-primary/5 rounded-2xl flex items-center justify-center mb-5">
+                  <CheckCircle2 className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{domain.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed mb-5">{domain.overview}</p>
+              </div>
+              <Link
+                to={`/services/${domain.id}`}
+                className="inline-flex items-center text-primary font-bold text-sm group"
+              >
+                View Details
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Course Section */}
+      <div className="bg-white border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <div className="text-center space-y-4 mb-12">
+            <h4 className="text-primary font-bold tracking-widest uppercase text-sm">Job Guarantee Course</h4>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
+              SAP <span className="text-primary">Career Program</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {COURSES.map((course) => (
+              <motion.div
+                key={course.id}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -6 }}
+                className="bg-slate-50 p-8 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 border border-slate-100"
+              >
+                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-6">
+                  <Laptop className="w-8 h-8 text-secondary" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{course.title}</h3>
+                <p className="text-slate-600 leading-relaxed mb-6">{course.overview}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                  {course.placementSupport.slice(0, 4).map((item) => (
+                    <div key={item} className="flex items-center space-x-3 bg-white p-4 rounded-2xl border border-slate-100">
+                      <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <span className="text-slate-800 font-medium text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  to={`/courses/${course.id}`}
+                  className="inline-flex items-center text-primary font-bold text-sm group"
+                >
+                  View Course Details
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -114,10 +202,10 @@ export default function Services() {
 
                 <div className="pt-4 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                   <Link
-                    to="/contact"
+                    to={`/services/${service.id}`}
                     className="bg-primary text-secondary px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 text-center"
                   >
-                    Apply Now
+                    View Details
                   </Link>
                   <a
                     href={`https://wa.me/91${COMPANY_DETAILS.whatsapp}`}

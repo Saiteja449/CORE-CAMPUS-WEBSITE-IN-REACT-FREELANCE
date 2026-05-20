@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
+import CourseDetail from "./pages/CourseDetail";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
@@ -28,6 +30,8 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
+          <Route path="services/:serviceId" element={<ServiceDetail />} />
+          <Route path="courses/:courseId" element={<CourseDetail />} />
           <Route path="about" element={<About />} />
           <Route path="careers" element={<Careers />} />
           <Route path="contact" element={<Contact />} />

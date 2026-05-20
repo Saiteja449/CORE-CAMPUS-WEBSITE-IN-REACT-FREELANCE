@@ -13,7 +13,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="text-secondary font-bold tracking-[0.3em] uppercase text-sm"
           >
-            Since 2012
+            Since 2024
           </motion.h4>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ export default function About() {
               Pioneering Professional Excellence at <span className="text-primary text-gradient">Core Campus</span>
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed">
-              Core Campus Pvt Ltd stands at the forefront of career coaching and institutional training in Bangalore. We are more than just a training center; we are a career accelerator dedicated to empowering students with practical skills that the modern industry demands.
+              Core Campus Pvt Ltd is a growing career coaching and institutional training company in Bangalore. We are more than just a training center; we are a career accelerator dedicated to empowering students with practical skills that the modern industry demands.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
               <div className="flex flex-col space-y-3">
@@ -116,7 +116,7 @@ export default function About() {
               </div>
               <div className="text-center space-y-4 px-4 overflow-hidden">
                 <p className="text-slate-600 leading-relaxed max-w-md mx-auto">
-                  A visionary leader with over a decade of experience in the education sector, driving Core Campus towards global standards of excellence.
+                  A focused leader building Core Campus from 2024 onward with a clear commitment to practical training, student confidence, and industry-ready career pathways.
                 </p>
                 <div className="flex justify-center space-x-4">
                    <div className="px-4 py-2 bg-slate-100 rounded-full text-primary font-bold text-xs uppercase tracking-tighter">Strategic Lead</div>
@@ -167,10 +167,9 @@ export default function About() {
           </div>
           <div className="relative border-l-2 border-primary/10 pl-8 space-y-12 ml-4">
             {[
-              { year: "2012", title: "The Foundation", desc: "Core Campus was founded with a mission to help Bangalore's students find their career paths." },
-              { year: "2015", title: "SAP Excellence Center", desc: "Launched our specialized SAP training division with a unique job-guarantee model." },
-              { year: "2018", title: "Global Partnerships", desc: "Expanded into international educational consultancy and partnered with 50+ Global Universities." },
-              { year: "2023", title: "Digital Transformation", desc: "Migrated to hybrid learning models and reached over 5000+ successful alumni milestones." },
+              { year: "2024", title: "The Foundation", desc: "Core Campus began with a mission to help students build practical skills and move confidently toward career opportunities." },
+              { year: "2025", title: "Career Training Expansion", desc: "Expanded internship domains, SAP training, placement support, and skill-based learning programs for students and freshers." },
+              { year: "Present", title: "Industry-Ready Learning", desc: "Continuing to grow with focused training, project-based internships, job-oriented courses, and placement assistance." },
             ].map((item, i) => (
               <div key={i} className="relative">
                 <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-secondary border-4 border-white shadow-sm shadow-secondary/50"></div>
