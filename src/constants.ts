@@ -15,6 +15,27 @@ export const COMPANY_DETAILS = {
   callNow: "9440340948",
 };
 
+export const TOP_COMPANIES = [
+  { name: "Meta", logo: "https://logo.clearbit.com/meta.com" },
+  { name: "IBM", logo: "https://logo.clearbit.com/ibm.com" },
+  { name: "Oracle", logo: "https://logo.clearbit.com/oracle.com" },
+  { name: "Intel", logo: "https://logo.clearbit.com/intel.com" },
+  { name: "NVIDIA", logo: "https://logo.clearbit.com/nvidia.com" },
+  { name: "Samsung", logo: "https://logo.clearbit.com/samsung.com" },
+  { name: "Sony", logo: "https://logo.clearbit.com/sony.com" },
+  { name: "Toyota", logo: "https://logo.clearbit.com/toyota.com" },
+  { name: "BMW", logo: "https://logo.clearbit.com/bmw.com" },
+  { name: "Mercedes-Benz", logo: "https://logo.clearbit.com/mercedes-benz.com" },
+  { name: "Cisco", logo: "https://logo.clearbit.com/cisco.com" },
+  { name: "Accenture", logo: "https://logo.clearbit.com/accenture.com" },
+  { name: "Adobe", logo: "https://logo.clearbit.com/adobe.com" },
+  { name: "Salesforce", logo: "https://logo.clearbit.com/salesforce.com" },
+  { name: "Netflix", logo: "https://logo.clearbit.com/netflix.com" },
+  { name: "Spotify", logo: "https://logo.clearbit.com/spotify.com" },
+  { name: "Deloitte", logo: "https://logo.clearbit.com/deloitte.com" },
+  { name: "SAP Labs", logo: "https://logo.clearbit.com/sap.com" },
+];
+
 export const SERVICES = [
   {
     id: "internships",
@@ -36,13 +57,6 @@ export const SERVICES = [
     description: "Connecting talented students with top-tier companies. Our placement cell works tirelessly for your success.",
     features: ["Resume building", "Mock interviews", "Soft skills training", "Direct recruitment drives"],
     icon: "UserPlus",
-  },
-  {
-    id: "admissions",
-    title: "College Admissions Guidance",
-    description: "Expert guidance to help you choose the right college and course to ensure a bright academic future.",
-    features: ["Course counseling", "University selection", "Application support", "Scholarship guidance"],
-    icon: "GraduationCap",
   },
 ];
 
@@ -328,19 +342,6 @@ export const SERVICE_DETAILS = [
     eligibility: ["Degree", "Diploma", "ITI", "B.Tech (ECE, EEE, Mechanical)", "Freshers seeking career support"],
     cta: "Apply Now",
   },
-  {
-    id: "admissions",
-    title: "College Admissions Guidance",
-    overview: "Personalized guidance for students selecting the right college, course, and career pathway with support for applications, eligibility, and scholarship direction.",
-    skills: ["Course counseling", "College shortlisting", "Application planning", "Scholarship awareness", "Career mapping"],
-    durationOptions: ["Counseling support based on admission timeline"],
-    fees: [{ title: "Admissions Guidance", details: ["Shared during counseling based on requirements"], fees: "Contact for details" }],
-    benefits: ["Clear academic direction", "Application support", "Course-fit clarity", "Reduced admission confusion"],
-    placement: "Career guidance is aligned with employability outcomes so students choose programs with stronger long-term placement potential.",
-    stipendInfo: [],
-    eligibility: ["Students planning Degree", "Diploma applicants", "ITI applicants", "B.Tech aspirants"],
-    cta: "Apply Now",
-  },
 ];
 
 export const ALL_SERVICE_DETAILS = [...SERVICE_DETAILS, ...INTERNSHIP_DOMAINS];
@@ -350,6 +351,27 @@ export const COURSES = [
     id: "sap-s4-hana-simple-finance-fico-module",
     title: "SAP S/4 HANA SIMPLE FINANCE FICO MODULE",
     overview: "SAP FICO is the finance and controlling module used by companies to manage accounting, reporting, cost control, and financial decision-making inside SAP S/4 HANA. This course prepares learners for real-time enterprise finance workflows with job-focused training and placement support.",
+    heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600",
+    galleryImages: [
+      {
+        src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400",
+        alt: "Business finance dashboard used in SAP reporting",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400",
+        alt: "Finance team collaborating on enterprise planning",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400",
+        alt: "Professional SAP training session in progress",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400",
+        alt: "Career growth and enterprise software learning",
+      },
+    ],
+    highlight: "Get trained in SAP with Job Guarantee.",
+    partnerCompanies: ["Deloitte", "Capgemini", "Accenture", "IBM", "SAP Labs"],
     explanation: [
       "SAP FICO combines Financial Accounting and Controlling to help organizations record transactions, track costs, create financial statements, and manage business performance in one integrated system.",
       "Companies use SAP because it connects finance with procurement, sales, inventory, HR, and operations, giving leadership accurate real-time data for decisions and compliance.",
@@ -362,6 +384,18 @@ export const COURSES = [
     certification: "Course completion certification with job guarantee agreement bond provided during joining.",
     placementSupport: ["100% Job Guarantee", "Up to 5 Direct HR Interviews", "1 Year Backend Support After Joining Company", "Job Guarantee Agreement Bond Provided During Joining"],
     benefits: ["Enterprise finance process knowledge", "Real-time industry usage", "High-demand ERP career path", "Finance and accounting module expertise"],
+    usage: [
+      "Used by finance teams to record and reconcile transactions accurately.",
+      "Used by enterprises to connect accounting with procurement, sales, inventory, and operations.",
+      "Used for faster month-end closing, reporting, and audit-ready compliance workflows.",
+      "Used by consultants and support teams to keep business data aligned across departments.",
+    ],
+    demand: [
+      "High demand in large companies running ERP-backed finance operations.",
+      "Consistent hiring need for SAP FICO consultants, support analysts, and finance process associates.",
+      "Strong demand because businesses keep moving from legacy accounting tools to integrated ERP systems.",
+      "Valuable for candidates with finance, commerce, accounting, or ERP career interests.",
+    ],
     cta: "Enroll Now",
   },
 ];

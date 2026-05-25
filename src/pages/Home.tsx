@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, Star, CheckCircle2, Users, Trophy, BookOpen, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
-import { SERVICES, COMPANY_DETAILS } from "../constants";
+import { SERVICES, COMPANY_DETAILS, TOP_COMPANIES } from "../constants";
 
 const STATS = [
   { label: "Students Guided", value: "Growing", icon: Users },
@@ -30,6 +30,8 @@ const TESTIMONIALS = [
     avatar: "https://i.pravatar.cc/150?u=anas",
   },
 ];
+
+const COMPANY_ROWS = [TOP_COMPANIES.slice(0, 10), TOP_COMPANIES.slice(10)];
 
 export default function Home() {
   return (
@@ -172,6 +174,44 @@ export default function Home() {
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Secure Placements Section */}
+      <section id="secure-placements" className="py-24 bg-white px-4 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center space-y-4 mb-12">
+            <p className="text-primary font-bold tracking-widest uppercase text-sm">Secure Placements with Top Brands</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
+              Trusted by <span className="text-primary">Leading Companies</span>
+            </h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
+              A moving showcase of brand logos that reflects the kind of placement ecosystem our students prepare for.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {COMPANY_ROWS.map((row, rowIndex) => (
+              <div key={rowIndex} className={`marquee overflow-hidden ${rowIndex === 1 ? "marquee-reverse" : ""}`}>
+                <div className="marquee-track flex w-max items-center gap-4 py-2">
+                  {[...row, ...row].map((company, index) => (
+                    <div
+                      key={`${company.name}-${index}`}
+                      className="flex h-24 w-40 shrink-0 items-center justify-center rounded-3xl border border-slate-200 bg-slate-50/80 px-6 shadow-sm backdrop-blur-sm"
+                    >
+                      <img
+                        src={company.logo}
+                        alt={company.name}
+                        className="max-h-12 w-auto object-contain grayscale opacity-90 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>

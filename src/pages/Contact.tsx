@@ -122,7 +122,6 @@ export default function Contact() {
                     <option>SAP Training</option>
                     <option>Internships</option>
                     <option>Career Placement</option>
-                    <option>College Admissions</option>
                     <option>Other Enquiry</option>
                   </select>
                 </div>

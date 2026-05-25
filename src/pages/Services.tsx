@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { CheckCircle2, ArrowRight, Laptop, GraduationCap, Briefcase, Building2 } from "lucide-react";
+import { CheckCircle2, ArrowRight, Laptop, Briefcase, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SERVICES, COMPANY_DETAILS, INTERNSHIP_DOMAINS, COURSES } from "../constants";
 
@@ -7,7 +7,6 @@ const ICON_MAP: Record<string, any> = {
   internships: Briefcase,
   sap: Laptop,
   placements: Building2,
-  admissions: GraduationCap,
 };
 
 export default function Services() {
@@ -109,28 +108,39 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -6 }}
-                className="bg-slate-50 p-8 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 border border-slate-100"
+                className="group relative overflow-hidden rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 border border-slate-100 min-h-[23rem]"
               >
-                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-6">
-                  <Laptop className="w-8 h-8 text-secondary" />
+                <img
+                  src={course.heroImage}
+                  alt={course.title}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/20" />
+                <div className="relative z-10 flex h-full flex-col justify-end p-8 text-white">
+                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
+                    <Laptop className="h-8 w-8 text-secondary" />
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-bold leading-tight">{course.title}</h3>
+                    <p className="text-slate-200 leading-relaxed">{course.overview}</p>
+                  </div>
+                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {course.placementSupport.slice(0, 4).map((item) => (
+                      <div key={item} className="flex items-center space-x-3 rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md p-4">
+                        <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0" />
+                        <span className="text-white font-medium text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    to={`/courses/${course.id}`}
+                    className="mt-6 inline-flex items-center text-secondary font-bold text-sm group"
+                  >
+                    View Course Details
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">{course.title}</h3>
-                <p className="text-slate-600 leading-relaxed mb-6">{course.overview}</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  {course.placementSupport.slice(0, 4).map((item) => (
-                    <div key={item} className="flex items-center space-x-3 bg-white p-4 rounded-2xl border border-slate-100">
-                      <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                      <span className="text-slate-800 font-medium text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <Link
-                  to={`/courses/${course.id}`}
-                  className="inline-flex items-center text-primary font-bold text-sm group"
-                >
-                  View Course Details
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
               </motion.div>
             ))}
           </div>

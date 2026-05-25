@@ -66,7 +66,7 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="text-lg font-bold text-secondary uppercase tracking-widest text-sm">Our Services</h4>
             <ul className="space-y-4">
-              {["Internships", "SAP Training", "Placements", "Admissions"].map((item) => (
+              {["Internships", "SAP Training", "Placements"].map((item) => (
                 <li key={item} className="text-slate-300 hover:text-secondary cursor-pointer transition-colors duration-200">
                   {item}
                 </li>
