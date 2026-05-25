@@ -1,5 +1,13 @@
 import { motion } from "motion/react";
-import { ArrowRight, Star, CheckCircle2, Users, Trophy, BookOpen, Briefcase } from "lucide-react";
+import {
+  ArrowRight,
+  Star,
+  CheckCircle2,
+  Users,
+  Trophy,
+  BookOpen,
+  Briefcase,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { SERVICES, COMPANY_DETAILS, TOP_COMPANIES } from "../constants";
 
@@ -31,7 +39,7 @@ const TESTIMONIALS = [
   },
 ];
 
-const COMPANY_ROWS = [TOP_COMPANIES.slice(0, 10), TOP_COMPANIES.slice(10)];
+const COMPANY_ROWS = [TOP_COMPANIES.slice(0, 4), TOP_COMPANIES.slice(4)];
 
 export default function Home() {
   return (
@@ -57,13 +65,17 @@ export default function Home() {
           >
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
               <Star className="w-4 h-4 text-secondary fill-secondary" />
-              <span className="text-secondary text-xs font-bold uppercase tracking-widest">Premium Educational Services</span>
+              <span className="text-secondary text-xs font-bold uppercase tracking-widest">
+                Premium Educational Services
+              </span>
             </div>
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-              Unlock Your <span className="text-secondary">Future</span> Potential
+              Unlock Your <span className="text-secondary">Future</span>{" "}
+              Potential
             </h1>
             <p className="text-xl text-slate-300 max-w-lg leading-relaxed">
-              Premium professional training and placement solutions designed to take your career from the classroom to the corporate world.
+              Premium professional training and placement solutions designed to
+              take your career from the classroom to the corporate world.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link
@@ -103,8 +115,12 @@ export default function Home() {
                 <CheckCircle2 className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <p className="text-slate-900 font-bold text-xl leading-none">Job Guaranteed</p>
-                <p className="text-slate-500 text-sm">SAP Specialized Programs</p>
+                <p className="text-slate-900 font-bold text-xl leading-none">
+                  Job Guaranteed
+                </p>
+                <p className="text-slate-500 text-sm">
+                  SAP Specialized Programs
+                </p>
               </div>
             </div>
           </motion.div>
@@ -127,8 +143,12 @@ export default function Home() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/5 rounded-2xl mb-4 group-hover:bg-white/10">
                   <stat.icon className="w-6 h-6 text-primary group-hover:text-secondary transition-colors" />
                 </div>
-                <h3 className="text-4xl font-bold text-primary group-hover:text-white mb-1">{stat.value}</h3>
-                <p className="text-slate-500 group-hover:text-slate-300 font-medium text-sm">{stat.label}</p>
+                <h3 className="text-4xl font-bold text-primary group-hover:text-white mb-1">
+                  {stat.value}
+                </h3>
+                <p className="text-slate-500 group-hover:text-slate-300 font-medium text-sm">
+                  {stat.label}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -139,16 +159,19 @@ export default function Home() {
       <section className="py-24 bg-slate-50 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-16">
-            <h4 className="text-primary font-bold tracking-widest uppercase text-sm">Our Expertise</h4>
+            <h4 className="text-primary font-bold tracking-widest uppercase text-sm">
+              Our Expertise
+            </h4>
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
               Shaping Your <span className="text-primary">Career Journey</span>
             </h2>
             <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-              We provide end-to-end support for students, from choosing the right course to securing their dream job.
+              We provide end-to-end support for students, from choosing the
+              right course to securing their dream job.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -163,8 +186,12 @@ export default function Home() {
                   <div className="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-6">
                     <CheckCircle2 className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">{service.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-6">{service.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                    {service.description}
+                  </p>
                 </div>
                 <Link
                   to={`/services/${service.id}`}
@@ -180,21 +207,30 @@ export default function Home() {
       </section>
 
       {/* Secure Placements Section */}
-      <section id="secure-placements" className="py-24 bg-white px-4 overflow-hidden">
+      <section
+        id="secure-placements"
+        className="py-24 bg-white px-4 overflow-hidden"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-12">
-            <p className="text-primary font-bold tracking-widest uppercase text-sm">Secure Placements with Top Brands</p>
+            <p className="text-primary font-bold tracking-widest uppercase text-sm">
+              Secure Placements with Top Brands
+            </p>
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
               Trusted by <span className="text-primary">Leading Companies</span>
             </h2>
             <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-              A moving showcase of brand logos that reflects the kind of placement ecosystem our students prepare for.
+              A moving showcase of brand logos that reflects the kind of
+              placement ecosystem our students prepare for.
             </p>
           </div>
 
           <div className="space-y-6">
             {COMPANY_ROWS.map((row, rowIndex) => (
-              <div key={rowIndex} className={`marquee overflow-hidden ${rowIndex === 1 ? "marquee-reverse" : ""}`}>
+              <div
+                key={rowIndex}
+                className={`marquee overflow-hidden ${rowIndex === 1 ? "marquee-reverse" : ""}`}
+              >
                 <div className="marquee-track flex w-max items-center gap-4 py-2">
                   {[...row, ...row].map((company, index) => (
                     <div
@@ -204,8 +240,15 @@ export default function Home() {
                       <img
                         src={company.logo}
                         alt={company.name}
-                        className="max-h-12 w-auto object-contain grayscale opacity-90 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                        className="max-h-12 w-auto object-contain "
                         loading="lazy"
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.onerror = null;
+                          target.src = `https://via.placeholder.com/300x80?text=${encodeURIComponent(
+                            company.name,
+                          )}`;
+                        }}
                         referrerPolicy="no-referrer"
                       />
                     </div>
@@ -239,7 +282,9 @@ export default function Home() {
           </motion.div>
 
           <div className="space-y-8">
-            <h4 className="text-primary font-bold tracking-widest uppercase text-sm">Why Partner With Us?</h4>
+            <h4 className="text-primary font-bold tracking-widest uppercase text-sm">
+              Why Partner With Us?
+            </h4>
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.1]">
               The Core Campus <span className="text-primary">Advantage</span>
             </h2>
@@ -254,7 +299,9 @@ export default function Home() {
                   <div className="mt-1 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-300">
                     <CheckCircle2 className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
                   </div>
-                  <p className="text-slate-700 font-medium text-lg leading-snug">{item}</p>
+                  <p className="text-slate-700 font-medium text-lg leading-snug">
+                    {item}
+                  </p>
                 </div>
               ))}
             </div>
@@ -273,8 +320,12 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-50 to-transparent"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl font-bold text-white">Student Success Stories</h2>
-            <p className="text-slate-400">Join a growing community of career-focused learners.</p>
+            <h2 className="text-4xl font-bold text-white">
+              Student Success Stories
+            </h2>
+            <p className="text-slate-400">
+              Join a growing community of career-focused learners.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTIMONIALS.map((t, i) => (
@@ -291,12 +342,21 @@ export default function Home() {
                     <Star key={i} className="w-4 h-4 fill-current" />
                   ))}
                 </div>
-                <p className="text-slate-300 leading-relaxed italic">"{t.text}"</p>
+                <p className="text-slate-300 leading-relaxed italic">
+                  "{t.text}"
+                </p>
                 <div className="flex items-center space-x-4 border-t border-white/10 pt-6">
-                  <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full ring-2 ring-secondary/30" referrerPolicy="no-referrer" />
+                  <img
+                    src={t.avatar}
+                    alt={t.name}
+                    className="w-12 h-12 rounded-full ring-2 ring-secondary/30"
+                    referrerPolicy="no-referrer"
+                  />
                   <div>
                     <p className="text-white font-bold">{t.name}</p>
-                    <p className="text-secondary text-sm font-medium">{t.role}</p>
+                    <p className="text-secondary text-sm font-medium">
+                      {t.role}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -315,10 +375,12 @@ export default function Home() {
         >
           <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--color-secondary)_0%,_transparent_70%)]"></div>
           <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-            Ready to Accelerate Your <span className="text-secondary">Career?</span>
+            Ready to Accelerate Your{" "}
+            <span className="text-secondary">Career?</span>
           </h2>
           <p className="text-white/70 text-xl max-w-2xl mx-auto font-light">
-            Don't wait for opportunities. Create them with Core Campus. Join our next cohort today.
+            Don't wait for opportunities. Create them with Core Campus. Join our
+            next cohort today.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Link

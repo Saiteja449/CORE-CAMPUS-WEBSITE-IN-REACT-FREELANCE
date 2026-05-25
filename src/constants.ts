@@ -16,24 +16,16 @@ export const COMPANY_DETAILS = {
 };
 
 export const TOP_COMPANIES = [
-  { name: "Meta", logo: "https://logo.clearbit.com/meta.com" },
-  { name: "IBM", logo: "https://logo.clearbit.com/ibm.com" },
-  { name: "Oracle", logo: "https://logo.clearbit.com/oracle.com" },
-  { name: "Intel", logo: "https://logo.clearbit.com/intel.com" },
-  { name: "NVIDIA", logo: "https://logo.clearbit.com/nvidia.com" },
-  { name: "Samsung", logo: "https://logo.clearbit.com/samsung.com" },
-  { name: "Sony", logo: "https://logo.clearbit.com/sony.com" },
-  { name: "Toyota", logo: "https://logo.clearbit.com/toyota.com" },
-  { name: "BMW", logo: "https://logo.clearbit.com/bmw.com" },
-  { name: "Mercedes-Benz", logo: "https://logo.clearbit.com/mercedes-benz.com" },
-  { name: "Cisco", logo: "https://logo.clearbit.com/cisco.com" },
-  { name: "Accenture", logo: "https://logo.clearbit.com/accenture.com" },
-  { name: "Adobe", logo: "https://logo.clearbit.com/adobe.com" },
-  { name: "Salesforce", logo: "https://logo.clearbit.com/salesforce.com" },
-  { name: "Netflix", logo: "https://logo.clearbit.com/netflix.com" },
-  { name: "Spotify", logo: "https://logo.clearbit.com/spotify.com" },
-  { name: "Deloitte", logo: "https://logo.clearbit.com/deloitte.com" },
-  { name: "SAP Labs", logo: "https://logo.clearbit.com/sap.com" },
+  { name: "Meta", logo: "https://cdn.simpleicons.org/meta" },
+  { name: "Samsung", logo: "https://cdn.simpleicons.org/samsung" },
+  { name: "Sony", logo: "https://cdn.simpleicons.org/sony" },
+  { name: "Toyota", logo: "https://cdn.simpleicons.org/toyota" },
+  { name: "BMW", logo: "https://cdn.simpleicons.org/bmw" },
+  { name: "Cisco", logo: "https://cdn.simpleicons.org/cisco" },
+  { name: "Accenture", logo: "https://cdn.simpleicons.org/accenture" },
+  { name: "Netflix", logo: "https://cdn.simpleicons.org/netflix" },
+  { name: "Spotify", logo: "https://cdn.simpleicons.org/spotify" },
+  { name: "SAP Labs", logo: "https://cdn.simpleicons.org/sap" },
 ];
 
 export const SERVICES = [
@@ -96,7 +88,7 @@ export const STIPEND_DETAILS = [
   },
 ];
 
-export const ELIGIBILITY = ["Degree", "Diploma", "ITI", "B.Tech (ECE, EEE, Mechanical)"];
+export const ELIGIBILITY = ["Degree", "Diploma", "ITI", "B.Tech "];
 
 const INTERNSHIP_DOMAIN_DATA = [
   {
@@ -339,7 +331,7 @@ export const SERVICE_DETAILS = [
     benefits: ["Better interview confidence", "Profile positioning", "Recruitment-drive awareness", "Soft-skill improvement"],
     placement: "Includes resume review, mock interview rounds, communication skills practice, and direct recruitment-drive guidance wherever available.",
     stipendInfo: [],
-    eligibility: ["Degree", "Diploma", "ITI", "B.Tech (ECE, EEE, Mechanical)", "Freshers seeking career support"],
+    eligibility: ["Degree", "Diploma", "ITI", "B.Tech ", "Freshers seeking career support"],
     cta: "Apply Now",
   },
 ];
