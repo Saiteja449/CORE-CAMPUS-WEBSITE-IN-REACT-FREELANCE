@@ -165,7 +165,9 @@ export default function Contact() {
                        <MapPin className="w-8 h-8 text-secondary" />
                     </div>
                     <p className="font-bold text-xl drop-shadow-lg">Rotano Suites Building, Bangalore</p>
-                    <button className="bg-white text-primary px-8 py-3 rounded-full font-bold text-sm shadow-xl hover:bg-secondary transition-all">Get Directions</button>
+                    <button 
+                      onClick={() => window.open("https://www.google.com/maps/search/Core+Campus+Pvt+Ltd,+Rotano+Suites+Building,+Ground+Floor,+Yelahanka+Old+Town,+Bangalore+-+560064/@13.1171824,77.550839,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D", "_blank")}
+                      className="bg-white text-primary px-8 py-3 rounded-full font-bold text-sm shadow-xl hover:bg-secondary transition-all">Get Directions</button>
                   </div>
                </div>
             </div>

@@ -92,8 +92,7 @@ export default function Careers() {
           </div>
         </div>
       </section>
-
-      {/* Current Opportunities */}
+      {/* 
       <section id="openings" className="py-24 bg-slate-50 px-4">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="flex flex-col md:flex-row justify-between items-end gap-8">
@@ -146,7 +145,7 @@ export default function Careers() {
             <p className="text-slate-500">Don't see a role that fits? <Link to="/contact" className="text-primary font-bold border-b border-primary/20 hover:border-primary transition-all">Upload your resume</Link> for future matching.</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits */}
       <section className="py-24 px-4 bg-primary text-white overflow-hidden relative">
