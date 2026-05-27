@@ -20,7 +20,7 @@ export const COMPANY_DETAILS = {
 export const TOP_COMPANIES = [
   { name: "Meta", logo: "https://cdn.simpleicons.org/meta" },
   { name: "Samsung", logo: "https://cdn.simpleicons.org/samsung" },
-  { name: "Sony", logo: "https://cdn.simpleicons.org/sony" },
+  // { name: "Sony", logo: "https://cdn.simpleicons.org/sony" },
   { name: "Toyota", logo: "https://cdn.simpleicons.org/toyota" },
   {
     name: "IBM",
@@ -40,7 +40,7 @@ export const TOP_COMPANIES = [
   },
    { name: "Meta", logo: "https://cdn.simpleicons.org/meta" },
   { name: "Samsung", logo: "https://cdn.simpleicons.org/samsung" },
-  { name: "Sony", logo: "https://cdn.simpleicons.org/sony" },
+  // { name: "Sony", logo: "https://cdn.simpleicons.org/sony" },
   { name: "Toyota", logo: "https://cdn.simpleicons.org/toyota" },
   {
     name: "IBM",
